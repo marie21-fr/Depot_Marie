@@ -39,5 +39,7 @@ ggplot(data=starwars,
   theme_dark()+
   geom_boxplot()+
   geom_point()+
+  geom_label(aes(label = name), nudge_x = 0.5, nudge_y = 5, size = 2)+
   labs(x = "couleur yeux", y = "taille",
        title ="Starwaaaaaars")
+
