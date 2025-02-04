@@ -1,0 +1,68 @@
+---
+title: "rapport_test"
+author: "Marie Faure"
+date: "2025-02-04"
+output: pdf_document
+bibliography: biblio/OPEN.bib
+csl: "biblio/isara-iso-690.csl"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warnings=FALSE, message=FALSE)
+library(ggplot2)
+library(dplyr)
+```
+
+
+
+# Introduction
+
+Dans le cadre du module A que nous avons choisi, intitulé **OPEN** (*Outils, perspectives et enjeux du numérique*), nous apprenons à utiliser de nombreux outils.
+Ce rapport est une mise en pratique.
+
+# prise en main
+Lors de ces différents cours, nous avons appris à utiliser **ggplot2**. Pour cela, nous avons eu pour défi de réaliser le graphique *le plus moche possible*.
+
+## les donnée 
+Les données choisies pour créer ce graphique sont celles du jeu de données starwars.
+Pour y accéder, nous devons l'importer dans *R* à l'aide du code suivant :
+```{r importation, echo=TRUE, warnings=FALSE}
+data("starwars")
+```
+
+Une fois cela effectué, et avant de commencer à créer mon graphique, j’analyse rapidement les données :
+```{r decouverte, echo=TRUE, warnings=FALSE}
+dim(starwars)
+names(starwars)
+head(starwars)
+```
+
+## les graphique 
+
+Nous pouvons maintenant réaliser nos graphiques à l’aide de document  fournis par le professeur, qui nous indiquent les différentes fonctionnalités de ggplot2: [@wickham_data-visualization_2024].
+
+```{r graph1, echo=TRUE, warnings=FALSE, fig.align = "center", fig.cap="Graf 1 : Répartition de la taille par espèce et genre"}
+ggplot(data=starwars,
+       mapping = aes(x=species, y=height, colour = gender))+
+  geom_boxplot()+
+  facet_grid(rows=vars(gender))
+```
+Ce graphique représente la distribution de la taille *(height)* pour chaque espèce *(species)*, avec une distinction par genre *(gender)* grâce à la couleur. De plus, il est divisé en plusieurs facettes, une par genre. Cela permet d'observer les variations de taille au sein de chaque espèce en fonction du genre.
+
+
+```{r graph2, echo=TRUE, warnings=FALSE, fig.align = "center", fig.cap="Graf 2 : Taille en fonction de la couleur des yeux"}
+ggplot(data=starwars,
+       mapping = aes(x=eye_color, y=height, colour = gender))+
+  theme_dark()+
+  geom_boxplot()+
+  geom_point()+
+  geom_label(aes(label = name), nudge_x = 0.5, nudge_y = 5, size = 2)+
+  labs(x = "couleur yeux", y = "taille",
+       title ="Starwaaaaaars")
+```
+Ce graphique examine la taille *(height)* en fonction de la couleur des yeux *(eye_color)*, tout en différenciant les genres grâce aux couleurs. En plus des boxplots et des points individuels, on ajoute des étiquettes avec les noms des personnages.
+
+# Conclusion 
+est ce que ce rapport et ces graphique son interesent et comprehensible? je ne sais pas mais il m'on permis de reprendre en mais les outils.
+
+# Bibliographie
