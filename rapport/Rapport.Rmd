@@ -1,0 +1,110 @@
+---
+title: "L’Open Source : Un Avantage pour la Sécurité"
+author: "Marie Faure"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output:
+  pdf_document:
+    toc: true
+    toc_depth: '3'
+    citation_package: biblatex
+    keep_tex: true
+bibliography: biblio/OPEN.bib
+csl: "biblio/isara-iso-690.csl"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\newpage
+
+## Introduction
+L’open source est devenu un pilier incontournable dans le développement logiciel et la cybersécurité. Contrairement aux logiciels propriétaires, les logiciels open source sont accessibles à tous, permettant ainsi une transparence totale du code. Cette caractéristique soulève une question fondamentale : l’open source est-il un avantage pour la sécurité des systèmes d’information ?
+
+### Definition et contexte
+
+Le terme "open source" désigne tout logiciel dont le code source est rendu accessible à tous. contrairement aux logiciels propriétaires, qui limitent l’accès et la modification du code, l’open source encourage une approche communautaire où chacun peut contribuer à son développement.
+Pour être considéré comme open source, un logiciel doit respecter plusieurs critères, notamment :
+
+- **Libre redistribution** : Le logiciel peut être distribué librement, qu'il soit vendu ou partagé gratuitement.  
+- **Accès au code source** : Le code doit être disponible sous forme lisible et modifiable.  
+- **Modification et distribution** : Toute modification est autorisée et peut être redistribuée sous la même \textbf{licence}\footnote{«Une licence Open Source est un accord juridique qui définit les conditions dans lesquelles le code peut être utilisé, modifié et distribué.»[@fc_micro_quest-ce_2023]}.  
+- **Respect du code source original** : Les modifications peuvent être encadrées, mais doivent permettre l'évolution du logiciel.  
+- **Non-discrimination** : Aucune restriction d'usage ne peut être imposée selon les utilisateurs ou les domaines d'application.  
+- **Application universelle de la licence** : Tous les bénéficiaires du logiciel doivent pouvoir l’utiliser sans contraintes supplémentaires.  
+- **Indépendance technologique** : La licence ne doit pas imposer de restrictions spécifiques aux logiciels ou aux technologies utilisées.  
+
+Ces critères garantissent que le logiciel open source promeut la collaboration, l'innovation et l'accès équitable à la technologie. [@open_source_initiative_open_2024]
+
+**Contexte et historique**
+
+Le concept d'open source apparais dans les années 1970 et 1980, au moment ou les chercheurs et développeurs partagent librement leurs programmes informatiques. 
+Cependant, avec la montée des logiciels propriétaires dans les années 1980, des figures telles que Richard Stallman militent pour la liberté logicielle. 
+En 1983, Stallman lance le projet GNU et fonde la Free Software Foundation en 1985, établissant les bases du logiciel libre.
+
+Dans les années 1990, pour éviter les ambiguïtés associées au terme "logiciel libre", l'expression "open source" est adoptée. Des projets emblématiques comme Linux, Apache et Mozilla Firefox illustrent le succès de ce modèle de développement collaboratif.
+
+Aujourd'hui, l'open source est omniprésent dans l'industrie technologique, utilisé par des entreprises, des gouvernements et des communautés à travers le monde. 
+Il joue un rôle clé dans l'innovation, notamment dans des domaines tels que le cloud computing, l'intelligence artificielle et la cybersécurité. [@wikipedia_open_2024]
+
+
+
+
+
+## Les Principes de Sécurité de l'Open Source
+## idée recue 
+
+Les logiciels open source sont souvent entourés de nombreuses idées reçues en matière de sécurité. Certains pensent qu’ils sont plus vulnérables aux cyberattaques en raison de la transparence de leur code, d'autres estiment que l’absence de support commercial les rend moins fiables, enfin, il est parfois supposé que "gratuit" signifie "moins sécurisé".
+
+### 1. Transparence et Auditabilité
+
+L'un des principaux atouts de l'open source est la transparence du code. Contrairement aux logiciels propriétaires, dont le code source est fermé, les logiciels open source offrent une visibilité totale, permettant aux experts en cybersécurité du monde entier d'examiner et d'auditer le code pour identifier et signaler d'éventuelles failles.
+
+*Exemples de projets bénéficiant de cette transparence : Linux, OpenSSL, Mozilla Firefox.*
+
+La collaboration entre développeurs indépendants, chercheurs en sécurité et entreprises permet une détection proactive des vulnérabilités et une amélioration continue de la sécurité des logiciels open source. Cette approche collaborative favorise une réponse rapide aux menaces potentielles et renforce la résilience des systèmes.
+
+### 2. Réactivité et Correction des Vulnérabilités
+
+La communauté open source étant mondiale et diversifiée, les failles de sécurité sont souvent identifiées et corrigées plus rapidement qu'avec un logiciel propriétaire.
+
+Comparaison avec les logiciels propriétaires : Dans les logiciels propriétaires, la responsabilité de la detection et de la correction des vulnérabilités dépend uniquement des équipes de développeurs internes, ce qui peut ralentir le processus, et lesser le systèmes vulnérables pendant des périodes plus longues.
+
+*Exemple: La faille Heartbleed dans OpenSSL a été rapidement corrigée grâce à la mobilisation de la communauté open source.*
+
+## Les Avantages Concrets de l'Open Source pour la Cybersécurité
+### 1. Une Large Communauté de Développement
+
+Les logiciels open source sont développés et maintenus par des milliers de contributeurs à travers le monde. Cette collaboration internationale assure une surveillance constante des failles de sécurité et favorise une amélioration continue des logiciels. Les contributions de cette communauté diversifiée permettent une détection rapide des vulnérabilités et une plus grande réactivité face aux potentielles menaces.
+
+Des organisations telles que la Linux Foundation et l'Apache Software Foundation soutiennent activement le développement et la sécurité des projets open source. Elles fournissent des ressources, des infrastructures et des directives pour assurer la qualité et la sécurité des logiciels développés. 
+
+### 2. Une Flexibilité et Une Personnalisation Accrues
+
+L'open source permet aux organisations d'adapter les solutions à leurs besoins spécifiques, réduisant ainsi les risques liés aux portes dérobées et aux dépendances externes.
+
+*Exemples d'adoption dans les entreprises et administrations publiques : De nombreuses entreprises et gouvernements adoptent des solutions open source pour bénéficier de cette flexibilité et améliorer leur sécurité informatique.*
+
+## Les Défis et Limites de l'Open Source
+
+Bien que l'open source présente de nombreux avantages, il comporte également des défis et des limites en matière de sécurité.
+
+### 1. Manque de Responsabilité et de Support
+
+Contrairement aux logiciels propriétaires qui offrent un support technique garanti, certains projets open source manquent de ressources dédiées pour assurer un suivi efficace des mises à jour de sécurité. Cette absence de support formel peut entraîner des retards dans la correction des vulnérabilités, laissant les systèmes exposés aux menaces.
+Mais certaine compagnie comme redat commence a ce developer pour contré a ce problème.
+
+### 2. Gestion des Dépendances et Risques de Sécurité
+
+Les logiciels open source intègrent souvent de nombreuses bibliothèques tierces, ce qui peut introduire des vulnérabilités si elles ne sont pas correctement mises à jour. La gestion de ces dépendances est importante pour maintenir la sécurité des applications.
+
+*Exemple de la faille Log4Shell : Cette vulnérabilité a affecté de nombreuses infrastructures utilisant la bibliothèque Log4j, soulignant l'importance de la gestion des dépendances dans les projets open source.*
+
+## Conclusion
+
+L'open source présente de nombreux avantages en matière de sécurité grâce à sa transparence, sa réactivité et la mobilisation de la communauté mondiale. Cependant, il implique également des défis, notamment en matière de gestion des dépendances et de support. Pour maximiser les bénéfices de l'open source en cybersécurité, les organisations doivent adopter des stratégies rigoureuses de gestion des risques et de mise à jour des logiciels. Ainsi, bien maîtrisé, l'open source demeure un atout majeur pour la cybersécurité moderne.
+
+[@patard_cybersecurite_2022],[@tal_guide_2022]
+
+
+# Bibliographie
